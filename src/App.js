@@ -1,6 +1,6 @@
 import React from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import {  Container, Grid, Typography,Box, TextField, FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, Checkbox, Button } from '@mui/material';
+import {  Container, Grid, Typography,Box, TextField, FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, Checkbox, Button, Stack, ListItem, CssBaseline } from '@mui/material';
 
 function App() {
  
@@ -29,22 +29,23 @@ function App() {
 
 
   return (
-  <div>
-   
-  <Container maxWidth="sm"
+    
+    <Container maxWidth={'md'}>
+<Box>
+
+  <Grid   spacing={2} maxWidth={'sm'}  sx={{display: 'flex',flexDirection:'column' ,border:'2px solid gold'}}>
+ 
+  <CssBaseline/>
   
-  sx={{border:'2px solid gold'}}
-   >
- <Box>
-  <Grid  sx={{display: 'flex',flexDirection:'column' }}>
-  <Grid Item > <Typography gutterBottom variant="h5" component="div">
+   <Grid item xs> <Typography gutterBottom variant="h5" component="div">
   Sign In to Avallo 
 </Typography></Grid>
-  <Grid Item><Typography sx={{ fontSize: 14 }} gutterBottom color="text.secondary" gutterBottom>
+
+  <Grid item xs><Typography sx={{ fontSize: 14 }} gutterBottom color="text.secondary" gutterBottom>
   Enter Your Details Below
   </Typography></Grid>
-  <Grid Item  ><TextField fullWidth label="Email address" id="fullWidth" /></Grid>
-  <Grid item> <FormControl sx={{ width: '100%' }} variant="outlined">
+  <Grid item  xs><TextField fullWidth label="Email address" id="fullWidth" /></Grid>
+  <Grid item xs> <FormControl sx={{ width: '100%' }} variant="outlined">
   <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
   <OutlinedInput
     id="outlined-adornment-password"
@@ -69,22 +70,25 @@ function App() {
 
 
 
-  <Grid Item sx={{display: 'flex',justifyContent:"space-between"}}>
+  <Grid item xs sx={{display: 'flex',justifyContent:"space-between"}}>
   <div><Checkbox/>Remember me </div>
    <Button>Forgot password?</Button>
    </Grid>
 
-   <Grid Item>
+   <Grid item xs>
    <Button  fullWidth sx={{backgroundColor:'green',color:'white',height:'50px'}}>Login</Button>
    </Grid>
    
-  
-
+   
+   
   </Grid>
   
- </Box>
+  </Box>
   </Container>
-  </div>
+
+ 
+  
+  
   );
 }
 
